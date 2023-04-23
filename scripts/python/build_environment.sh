@@ -65,7 +65,8 @@ VIRTUALENV=${PYENV_ROOT}/versions/${VERSION}/bin/virtualenv
 # Okay cool let's build us a virtualenv!
 
 echo "INFO: Building virtualenv at $WORK_DIR"
-${VIRTUALENV} --always-copy $WORK_DIR > /dev/null 2>&1
+${VIRTUALENV} --always-copy $WORK_DIR
+echo "INFO: Done building virtualenv at $WORK_DIR"
 
 if [ "$REQUIREMENTS_FILE" != "null" ]; then
   echo "INFO: Installing from pip"
