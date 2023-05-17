@@ -30,4 +30,3 @@ npm install
 eval "${CUSTOM_COMMANDS}"
 
 popd # leave WORK_DIR
-popd # leave PROJECT_PATH
