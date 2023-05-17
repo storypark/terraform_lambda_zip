@@ -8,6 +8,6 @@ if ! [ -d $PROJECT ]; then
   exit 1
 fi
 
-PROJECT_HASH=$(find -s $PROJECT -type f | cpio -o --quiet | shasum -a 256 | cut -d " " -f 1)
+PROJECT_HASH=$(find $PROJECT -type f | sort | cpio -o --quiet | shasum -a 256 | cut -d " " -f 1)
 
 jq -n --arg sha "$PROJECT_HASH" '{"sha": $sha}'
