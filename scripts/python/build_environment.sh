@@ -44,7 +44,7 @@ PYENV="command pyenv"
 # eval "$(pyenv init -)"
 MAJOR_VERSION=$(echo $PYTHON_RUNTIME | sed 's/python//')
 
-VERSIONS=$(${PYENV} versions --bare | grep -e "$MAJOR_VERSION" | grep -e "[0-9]\.[0-9]\.[0-9]" | awk 'BEGIN { FS="/"; } {print $1}' |  uniq | sort -r )
+VERSIONS=$(${PYENV} versions --bare | grep -e "$MAJOR_VERSION" | grep -e "[0-9]\+\.[0-9]\+\.[0-9]\+" | awk 'BEGIN { FS="/"; } {print $1}' |  uniq | sort -r )
 
 PYENV_ROOT=$(${PYENV} root)
 
