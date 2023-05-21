@@ -59,7 +59,7 @@ for version in $VERSIONS; do
 done
 echo "VERSION: ${VERSION}"
 
-if ! [ -d $VERSION ]; then
+if ! [[ -d ${PYENV_ROOT}/versions/${VERSION} ]]; then
   echo "ERROR: Python version not found, is it installed in pyenv?"
   echo "ERROR: Expected: $MAJOR_VERSION"
   exit 1
