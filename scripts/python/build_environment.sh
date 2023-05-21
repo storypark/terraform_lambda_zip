@@ -43,10 +43,13 @@ PYENV="command pyenv"
 
 # eval "$(pyenv init -)"
 MAJOR_VERSION=$(echo $PYTHON_RUNTIME | sed 's/python//')
+echo "Major Version: ${MAJOR_VERSION}"
 
 VERSIONS=$(${PYENV} versions --bare | grep -e "$MAJOR_VERSION" | grep -e "[0-9]\+\.[0-9]\+\.[0-9]\+" | awk 'BEGIN { FS="/"; } {print $1}' |  uniq | sort -r )
+echo "Versions: ${VERSIONS}"
 
 PYENV_ROOT=$(${PYENV} root)
+echo "PYENV_ROOT: ${PYENV_ROOT}"
 
 # Expand the VERSIONS string into a fully-fledged array
 # Not sure how else to do this
@@ -54,6 +57,7 @@ for version in $VERSIONS; do
   VERSION=$version
   break
 done
+echo "VERSION: ${VERSION}"
 
 if ! [ -d $VERSION ]; then
   echo "ERROR: Python version not found, is it installed in pyenv?"
