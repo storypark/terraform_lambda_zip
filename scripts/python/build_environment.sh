@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 PYTHON_RUNTIME=$RUNTIME
 REQUIREMENTS_FILE=$DEPENDENCIES_FILE
