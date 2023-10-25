@@ -8,6 +8,7 @@ locals {
     "nodejs10.x" = "nodejs"
     "nodejs8.10" = "nodejs"
     "nodejs6.10" = "nodejs"
+    "nodejs18.x" = "nodejs"
   }
 
   custom = {
