@@ -16,7 +16,7 @@ if ! [ -d $OUTPUT_PATH ]; then
   exit 1
 fi
 
-PYTHON_VERSIONS="python2.7 python3.6 python3.7  python3.8"
+PYTHON_VERSIONS="python2.7 python3.6 python3.7  python3.8 python3.11"
 
 if ! [[ $PYTHON_VERSIONS =~ (^|[[:space:]])$RUNTIME($|[[:space:]]) ]]; then
   echo "ERROR: Invalid python runtime $PYTHON_RUNTIME"
