@@ -3,6 +3,7 @@ locals {
     "python3.8"  = "python"
     "python3.7"  = "python"
     "python3.6"  = "python"
+    "python3.11" = "python"
     "nodejs14.x" = "nodejs"
     "nodejs12.x" = "nodejs"
     "nodejs10.x" = "nodejs"
